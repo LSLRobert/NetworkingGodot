@@ -1,0 +1,31 @@
+# init
+-- create hub first
+c:\> git init
+c:\> git branch -M main
+c:\> git remote add origin https://github.com/LSLRobert/NetworkingGodot
+c:\> git switch main (fails)
+c:\> git pull origin
+c:\> git switch main
+c:\> git push origin
+
+
+# commit
+
+c:\> git status
+c:\> git add *
+c:\> git commit -m "message here"
+c:\> git push origin
+
+
+# revert/reset
+
+c:\> git reset .
+
+# user
+
+c:\> git config --global user.email
+c:\> git config --global user.email "my@email.com"
+
+# other
+git push --set-upstream origin main
+
