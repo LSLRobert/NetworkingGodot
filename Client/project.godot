@@ -11,8 +11,14 @@ config_version=4
 [application]
 
 config/name="Client"
-run/main_scene="res://Scenes/GameScenes/World/World.tscn"
+run/main_scene="res://Scenes/SceneHandler.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameData="*res://Scenes/Singletons/GameData.gd"
+Server="*res://Scenes/Singletons/Server.gd"
+Gateway="*res://Scenes/Singletons/Gateway.gd"
 
 [display]
 

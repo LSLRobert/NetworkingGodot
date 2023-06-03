@@ -1,9 +1,14 @@
 extends KinematicBody2D
+#Player
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 100
 export var ROLL_SPEED = 100
 export var FRICTION = 500
+
+var spear
+var sword
+var axe
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -50,6 +55,11 @@ func attack_state():
 	if state == ATTACK: pass
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
+	
+	#getting server data
+	spear = Server.FetchSkillDamage("Spear", get_instance_id())
+#	sword = Server.FetchSkillDamage("Sword", get_instance_id())
+#	axe   = Server.FetchSkillDamage("Axe", get_instance_id())
 
 func attack_animation_finished():
 	state = MOVE

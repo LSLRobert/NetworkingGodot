@@ -14,6 +14,10 @@ config/name="Server"
 run/main_scene="res://Scenes/Main/Server.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+ServerData="*res://Scenes/Singletons/ServerData.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
